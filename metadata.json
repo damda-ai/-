@@ -1,0 +1,6 @@
+{
+  "name": "도시락담다 - 프리미엄 수제 단체도시락",
+  "description": "회의·행사·학원·세미나 맞춤 제작 (10개~500개 OK). 공장에서 찍어내는 냉동 도시락이 아닌 당일 수제 도시락! 10분 내 맞춤 견적 안내.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

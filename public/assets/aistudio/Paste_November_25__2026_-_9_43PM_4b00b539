@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>우리 동네 단체도시락 1등, 도시락담다 | 프리미엄 수제 단체도시락</title>
+  <meta name="description" content="회의·행사·학원·세미나 맞춤 제작 (10개~500개 OK). 공장에서 찍어내는 냉동 도시락이 아닌 당일 수제 도시락! 10분 내 맞춤 견적 안내." />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+  <style>
+    :root {
+      --bg-page: #f5f3ef;
+      --bg-white: #ffffff;
+      --bg-warm: #faf8f5;
+      --brand-dark: #161f1d;
+      --brand-dark-2: #222e2b;
+      --accent: #e05a1b;
+      --accent-hover: #c94c12;
+      --accent-soft: #fff2eb;
+      --kakao: #fee500;
+      --text-main: #1b1f1e;
+      --text-sub: #5a6260;
+      --text-muted: #88918e;
+      --border: #e6e2da;
+      --radius-lg: 16px;
+      --radius-md: 12px;
+      --shadow-sm: 0 2px 10px rgba(22, 31, 29, 0.04);
+      --shadow-md: 0 10px 30px rgba(22, 31, 29, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      padding-bottom: 78px;
+      font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Malgun Gothic", sans-serif;
+      background: var(--bg-page);
+      color: var(--text-main);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap { max-width: 920px; margin: 0 auto; padding: 0 18px; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+      text-decoration: none; font-weight: 700; border-radius: 10px;
+      cursor: pointer; border: none; transition: all 0.18s ease;
+      font-family: inherit;
+    }
+    .btn:active { transform: scale(0.98); }
+
+    /* Top Sticky Header */
+    .top-header {
+      position: sticky; top: 0; z-index: 900;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+    .header-inner {
+      max-width: 920px; margin: 0 auto; padding: 12px 18px;
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    }
+    .logo {
+      font-size: 19px; font-weight: 800; color: var(--brand-dark);
+      text-decoration: none; letter-spacing: -0.4px;
+      display: flex; align-items: center; gap: 7px;
+    }
+    .logo-badge {
+      font-size: 11px; font-weight: 700; background: var(--accent-soft);
+      color: var(--accent); padding: 3px 8px; border-radius: 99px;
+    }
+    .nav-links { display: none; gap: 20px; }
+    .nav-links a {
+      text-decoration: none; color: var(--text-sub);
+      font-size: 14px; font-weight: 600;
+    }
+    .nav-links a:hover { color: var(--accent); }
+    .header-cta { display: flex; gap: 8px; }
+    .btn-header-kakao { background: var(--kakao); color: #191919; padding: 8px 13px; font-size: 13px; border-radius: 8px; }
+    .btn-header-quote { background: var(--brand-dark); color: #fff; padding: 8px 14px; font-size: 13px; border-radius: 8px; }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(145deg, #161f1d 0%, #24322e 100%);
+      color: #fff;
+      padding: 46px 0 48px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-grid {
+      display: grid; grid-template-columns: 1fr; gap: 28px; align-items: center;
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(224, 90, 27, 0.18);
+      border: 1px solid rgba(224, 90, 27, 0.5);
+      color: #ffb894;
+      padding: 6px 14px; border-radius: 99px;
+      font-size: 13px; font-weight: 700; margin-bottom: 16px;
+    }
+    .hero h1 {
+      margin: 0 0 14px; font-size: 31px; font-weight: 800;
+      line-height: 1.3; letter-spacing: -0.7px;
+    }
+    .hero h1 span { color: #ff9c6b; }
+    .hero-sub {
+      margin: 0 0 22px; font-size: 15px; color: #d1dad6; line-height: 1.65;
+    }
+    .hero-btns { display: flex; flex-wrap: wrap; gap: 10px; }
+    .btn-primary { background: var(--accent); color: #fff; padding: 14px 24px; font-size: 15px; }
+    .btn-primary:hover { background: var(--accent-hover); }
+    .btn-kakao { background: var(--kakao); color: #191919; padding: 14px 22px; font-size: 15px; }
+    .btn-ghost {
+      background: rgba(255,255,255,0.08); color: #fff;
+      border: 1px solid rgba(255,255,255,0.24); padding: 14px 20px; font-size: 15px;
+    }
+    .hero-visual {
+      position: relative; border-radius: var(--radius-lg); overflow: hidden;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    .hero-visual img { width: 100%; display: block; aspect-ratio: 4 / 3; object-fit: cover; }
+    .hero-visual-tag {
+      position: absolute; bottom: 12px; left: 12px; right: 12px;
+      background: rgba(22, 31, 29, 0.85); backdrop-filter: blur(6px);
+      color: #fff; padding: 10px 14px; border-radius: 10px;
+      font-size: 13px; font-weight: 600;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .hero-visual-tag span { color: #ff9c6b; font-weight: 800; }
+
+    /* Trust Stats Bar */
+    .stats-wrap { margin-top: -24px; position: relative; z-index: 10; }
+    .stats-grid {
+      background: var(--bg-white); border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md); border: 1px solid var(--border);
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      overflow: hidden;
+    }
+    .stat-item {
+      padding: 18px 14px; text-align: center;
+      border-bottom: 1px solid var(--border); border-right: 1px solid var(--border);
+    }
+    .stat-item:nth-child(2n) { border-right: none; }
+    .stat-num { font-size: 19px; font-weight: 800; color: var(--brand-dark); margin-bottom: 3px; }
+    .stat-num em { font-style: normal; color: var(--accent); }
+    .stat-label { font-size: 12.5px; color: var(--text-sub); font-weight: 500; }
+
+    /* Common Section */
+    .section { padding: 52px 0; }
+    .section-card-bg { background: var(--bg-white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .section-head { text-align: center; margin-bottom: 28px; }
+    .section-eyebrow {
+      display: inline-block; font-size: 12px; font-weight: 800;
+      color: var(--accent); letter-spacing: 0.6px; margin-bottom: 8px;
+      background: var(--accent-soft); padding: 4px 12px; border-radius: 99px;
+    }
+    .section-title {
+      margin: 0 0 10px; font-size: 24px; font-weight: 800;
+      color: var(--brand-dark); letter-spacing: -0.5px; line-height: 1.35;
+    }
+    .section-desc {
+      margin: 0 auto; max-width: 600px; font-size: 15px;
+      color: var(--text-sub); line-height: 1.65;
+    }
+
+    /* Use-Case Grid (B2B 맞춤 상황) */
+    .usecase-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 28px; }
+    .usecase-card {
+      background: var(--bg-white); border: 1px solid var(--border);
+      border-radius: var(--radius-md); padding: 18px 16px;
+      box-shadow: var(--shadow-sm);
+    }
+    .usecase-icon { font-size: 24px; margin-bottom: 8px; display: block; }
+    .usecase-card h3 { margin: 0 0 6px; font-size: 16px; font-weight: 800; color: var(--brand-dark); }
+    .usecase-card p { margin: 0; font-size: 13px; color: var(--text-sub); line-height: 1.5; }
+
+    /* Brand Copy + 2 Photos */
+    .story-box {
+      background: var(--bg-white); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 26px 20px;
+      box-shadow: var(--shadow-sm);
+    }
+    .photo-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0; }
+    .photo-card { position: relative; border-radius: var(--radius-md); overflow: hidden; }
+    .photo-card img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; display: block; }
+    .photo-caption {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,0.72));
+      color: #fff; font-size: 12px; font-weight: 600; padding: 20px 10px 10px;
+    }
+    .check-grid { display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 18px; }
+    .check-item {
+      display: flex; align-items: flex-start; gap: 12px;
+      background: var(--bg-warm); border: 1px solid var(--border);
+      border-radius: var(--radius-md); padding: 14px 16px;
+    }
+    .check-badge {
+      flex-shrink: 0; width: 24px; height: 24px; border-radius: 50%;
+      background: var(--accent); color: #fff; font-size: 13px; font-weight: 800;
+      display: flex; align-items: center; justify-content: center; margin-top: 2px;
+    }
+    .check-item strong { display: block; font-size: 15px; color: var(--brand-dark); margin-bottom: 3px; }
+    .check-item span { font-size: 13.5px; color: var(--text-sub); line-height: 1.5; }
+
+    .cta-strip {
+      margin-top: 22px; background: var(--accent-soft);
+      border: 1px solid #ffd5be; border-radius: var(--radius-md);
+      padding: 20px; text-align: center;
+    }
+    .cta-strip p { margin: 0 0 14px; font-size: 15px; font-weight: 800; color: var(--brand-dark); }
+    .cta-strip-btns { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+    .btn-sm-white { background: #fff; color: var(--brand-dark); border: 1px solid var(--border); padding: 12px 18px; font-size: 14px; }
+
+    /* Quality Banner */
+    .quality-banner {
+      background: var(--brand-dark); color: #fff;
+      border-radius: var(--radius-lg); padding: 26px 22px;
+      margin-bottom: 24px; position: relative; overflow: hidden;
+      border-left: 5px solid var(--accent);
+    }
+    .quality-banner h3 { margin: 0 0 8px; font-size: 20px; font-weight: 800; line-height: 1.4; }
+    .quality-banner p { margin: 0; font-size: 14.5px; color: #cfd8d5; line-height: 1.6; }
+
+    /* Menu Tabs & Cards */
+    .menu-tabs {
+      display: flex; gap: 8px; overflow-x: auto; padding-bottom: 6px; margin-bottom: 20px;
+      -webkit-overflow-scrolling: touch;
+    }
+    .menu-tab {
+      flex-shrink: 0; background: var(--bg-warm); color: var(--text-sub);
+      border: 1px solid var(--border); padding: 9px 16px;
+      border-radius: 99px; font-size: 13.5px; font-weight: 700; cursor: pointer;
+      transition: all 0.15s; font-family: inherit;
+    }
+    .menu-tab.active {
+      background: var(--brand-dark); color: #fff; border-color: var(--brand-dark);
+    }
+
+    .menu-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+    .menu-card {
+      display: flex; justify-content: space-between; align-items: stretch; gap: 14px;
+      background: var(--bg-white); border: 1px solid var(--border);
+      border-radius: var(--radius-md); padding: 14px;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .menu-card:hover { border-color: #d2ccc2; box-shadow: var(--shadow-sm); }
+    .menu-card.hidden { display: none; }
+    .menu-info { flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+    .menu-cat-label { font-size: 11px; font-weight: 700; color: var(--accent); margin-bottom: 4px; }
+    .menu-name { font-size: 16px; font-weight: 800; color: var(--brand-dark); line-height: 1.35; }
+    .tag {
+      display: inline-block; font-size: 11px; font-weight: 700;
+      background: var(--accent-soft); color: var(--accent);
+      padding: 2px 7px; border-radius: 4px; margin-left: 4px; vertical-align: middle;
+    }
+    .menu-desc { font-size: 12.5px; color: var(--text-sub); margin: 6px 0 10px; line-height: 1.45; }
+    .menu-bottom { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+    .menu-price { font-size: 17px; font-weight: 800; color: var(--brand-dark); }
+    .btn-pick {
+      background: var(--bg-warm); color: var(--brand-dark);
+      border: 1px solid var(--border); padding: 6px 11px;
+      border-radius: 7px; font-size: 12px; font-weight: 700; cursor: pointer; font-family: inherit;
+    }
+    .btn-pick:hover { background: var(--accent-soft); color: var(--accent); border-color: #ffc5a8; }
+    .btn-pick.picked { background: var(--brand-dark); color: #fff; border-color: var(--brand-dark); }
+    .menu-thumb {
+      width: 98px; height: 98px; object-fit: cover;
+      border-radius: 10px; background: #eee; flex-shrink: 0; align-self: center;
+    }
+
+    /* Process Section */
+    .process-grid { display: grid; grid-template-columns: 1fr; gap: 20px; align-items: center; }
+    .process-img {
+      width: 100%; max-height: 520px; object-fit: cover;
+      border-radius: var(--radius-lg); display: block; box-shadow: var(--shadow-sm);
+    }
+    .process-steps { display: grid; gap: 12px; }
+    .step-card {
+      background: var(--bg-white); border: 1px solid var(--border);
+      border-radius: var(--radius-md); padding: 18px;
+      display: flex; gap: 14px; align-items: flex-start;
+    }
+    .step-num {
+      flex-shrink: 0; font-size: 12px; font-weight: 800;
+      background: var(--brand-dark); color: #fff;
+      padding: 5px 10px; border-radius: 6px;
+    }
+    .step-card h4 { margin: 0 0 5px; font-size: 15.5px; font-weight: 800; color: var(--brand-dark); }
+    .step-card p { margin: 0; font-size: 13.5px; color: var(--text-sub); line-height: 1.55; }
+
+    /* Inquiry Form (B2B Modern Style) */
+    .inquiry-box {
+      background: var(--bg-white); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 28px 20px;
+      box-shadow: var(--shadow-md);
+    }
+    .quick-contact-bar {
+      display: grid; grid-template-columns: 1fr; gap: 10px;
+      background: var(--bg-warm); border: 1px solid var(--border);
+      border-radius: var(--radius-md); padding: 16px; margin-bottom: 24px;
+    }
+    .quick-contact-text strong { display: block; font-size: 15px; color: var(--brand-dark); margin-bottom: 2px; }
+    .quick-contact-text span { font-size: 13px; color: var(--text-sub); }
+    .quick-contact-btns { display: flex; gap: 8px; }
+    .quick-contact-btns .btn { flex: 1; padding: 11px 12px; font-size: 13.5px; }
+
+    .form-grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+    .form-group label { display: block; font-size: 13.5px; font-weight: 700; color: var(--brand-dark); margin-bottom: 6px; }
+    .form-group label .req { color: var(--accent); }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; padding: 12px 13px; border: 1px solid #d5d1c8;
+      border-radius: 8px; font-size: 14px; font-family: inherit;
+      background: #fff; color: var(--text-main); transition: border-color 0.15s;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      outline: none; border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(224, 90, 27, 0.12);
+    }
+    .doc-checks { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+    .doc-check-label {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--bg-warm); border: 1px solid var(--border);
+      padding: 8px 12px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer;
+    }
+    .doc-check-label input { width: auto; margin: 0; accent-color: var(--accent); }
+    .privacy-row {
+      margin-top: 16px; display: flex; align-items: center; gap: 8px;
+      font-size: 13px; color: var(--text-sub);
+    }
+    .privacy-row input { width: 16px; height: 16px; accent-color: var(--accent); }
+    .submit-btn {
+      width: 100%; margin-top: 16px; background: var(--accent); color: #fff;
+      border: none; padding: 16px; border-radius: 10px;
+      font-size: 16px; font-weight: 800; cursor: pointer; font-family: inherit;
+      box-shadow: 0 6px 16px rgba(224, 90, 27, 0.25);
+    }
+    .submit-btn:hover { background: var(--accent-hover); }
+
+    /* Footer */
+    .footer {
+      text-align: center; padding: 28px 18px 36px;
+      font-size: 12.5px; color: var(--text-muted); line-height: 1.7;
+    }
+
+    /* Sticky Bottom Bar */
+    .sticky-bar {
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 999;
+      background: rgba(255,255,255,0.96); backdrop-filter: blur(8px);
+      border-top: 1px solid var(--border);
+      box-shadow: 0 -4px 16px rgba(0,0,0,0.06);
+      padding: 10px 12px;
+    }
+    .sticky-inner { max-width: 920px; margin: 0 auto; display: flex; gap: 8px; }
+    .sticky-inner .btn { flex: 1; padding: 12px 8px; font-size: 13.5px; border-radius: 9px; }
+    .sticky-call { background: var(--brand-dark); color: #fff; }
+    .sticky-kakao { background: var(--kakao); color: #191919; }
+    .sticky-quote { background: var(--accent); color: #fff; }
+
+    /* Toast */
+    .toast {
+      position: fixed; bottom: 84px; left: 50%; transform: translateX(-50%) translateY(16px);
+      background: var(--brand-dark); color: #fff; padding: 10px 18px;
+      border-radius: 99px; font-size: 13px; font-weight: 600;
+      opacity: 0; pointer-events: none; transition: all 0.22s ease; z-index: 1000;
+      box-shadow: var(--shadow-md); white-space: nowrap;
+    }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+    /* Desktop / Tablet Responsive */
+    @media (min-width: 720px) {
+      .nav-links { display: flex; }
+      .hero { padding: 60px 0 64px; }
+      .hero-grid { grid-template-columns: 1.15fr 0.85fr; gap: 36px; }
+      .hero h1 { font-size: 38px; }
+      .stats-grid { grid-template-columns: repeat(4, 1fr); }
+      .stat-item { border-bottom: none; }
+      .stat-item:nth-child(2n) { border-right: 1px solid var(--border); }
+      .stat-item:last-child { border-right: none; }
+      .usecase-grid { grid-template-columns: repeat(4, 1fr); }
+      .check-grid { grid-template-columns: repeat(3, 1fr); }
+      .menu-grid { grid-template-columns: repeat(2, 1fr); }
+      .process-grid { grid-template-columns: 0.95fr 1.05fr; gap: 28px; }
+      .quick-contact-bar { grid-template-columns: 1.2fr 1fr; align-items: center; }
+      .form-grid { grid-template-columns: 1fr 1fr; }
+      .form-group.full { grid-column: 1 / -1; }
+      .inquiry-box { padding: 36px 32px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 상단 고정 헤더 -->
+  <header class="top-header">
+    <div class="header-inner">
+      <a href="#" class="logo">도시락담다 <span class="logo-badge">단체주문 전문</span></a>
+      <nav class="nav-links">
+        <a href="#features">서비스 강점</a>
+        <a href="#menu">메뉴 라인업</a>
+        <a href="#process">제작·배송</a>
+        <a href="#inquiry">견적 신청</a>
+      </nav>
+      <div class="header-cta">
+        <a href="https://pf.kakao.com/_zcfexj" target="_blank" rel="noopener noreferrer" class="btn btn-header-kakao">카톡 상담</a>
+        <a href="#inquiry" class="btn btn-header-quote">견적 문의</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 히어로 섹션 -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-eyebrow">회의·행사·학원·세미나 맞춤 제작 (10개~500개 OK)</div>
+          <h1>우리 동네 단체도시락 1등,<br /><span>도시락담다</span></h1>
+          <p class="hero-sub">
+            [도시락담다] 정성 가득 수제 단체도시락, 원하는 시간·장소로 정확하게 배송해 드립니다! 🍱<br />
+            받는 분도 주문하는 분도 모두 만족하는 깔끔한 프리미엄 수제 도시락입니다.
+          </p>
+          <div class="hero-btns">
+            <a href="#inquiry" class="btn btn-primary">견적 문의하기</a>
+            <a href="https://pf.kakao.com/_zcfexj" target="_blank" rel="noopener noreferrer" class="btn btn-kakao">💬 카카오톡 상담</a>
+            <a href="#menu" class="btn btn-ghost">자세히 보기</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img src="photo4.jpg" alt="당일 신선한 재료로 정갈하게 담아낸 도시락담다 수제 도시락" />
+          <div class="hero-visual-tag">
+            <div>당일 신선 조리 · 1:1 예산 맞춤</div>
+            <span>10분 내 견적 안내</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 핵심 신뢰 지표 바 -->
+  <div class="wrap stats-wrap">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-num"><em>10 ~ 500</em>개</div>
+        <div class="stat-label">소량부터 대량 단체 OK</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num"><em>10분</em> 내</div>
+        <div class="stat-label">예산·수량 맞춤 견적 발송</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num"><em>당일</em> 조리</div>
+        <div class="stat-label">냉동 없는 100% 수제 반찬</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num"><em>즉시</em> 발급</div>
+        <div class="stat-label">세금계산서·견적서·카드결제</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 행사 유형별 큐레이션 + 서비스 강점 -->
+  <section id="features" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="section-eyebrow">WHY DOSIRAK DAMDA</span>
+        <h2 class="section-title">어떤 자리에서도 빛나는 맞춤 단체도시락</h2>
+        <p class="section-desc">중요한 행사, 병원 세미나, 학원 간식, 회사 야근 식사까지 목적과 예산에 딱 맞게 준비해 드립니다.</p>
+      </div>
+
+      <div class="usecase-grid">
+        <div class="usecase-card">
+          <span class="usecase-icon">💼</span>
+          <h3>회의·기업 세미나</h3>
+          <p>임원 회의, 미팅, 컨퍼런스 등 격식 있는 자리에 어울리는 품격 있는 한정식 한상</p>
+        </div>
+        <div class="usecase-card">
+          <span class="usecase-icon">🏥</span>
+          <h3>병원·학회 행사</h3>
+          <p>의료진 식사 및 학술 세미나 일정에 맞춘 정갈한 구성과 정확한 시간 배송</p>
+        </div>
+        <div class="usecase-card">
+          <span class="usecase-icon">🎓</span>
+          <h3>학원·학교·시험</h3>
+          <p>학생들과 교직원이 모두 좋아하는 푸짐한 메인 구성과 실속 있는 예산 설계</p>
+        </div>
+        <div class="usecase-card">
+          <span class="usecase-icon">🏢</span>
+          <h3>야근·워크샵·행사</h3>
+          <p>10개 소규모 팀 식사부터 500개 대규모 행사까지 1:1 전담 맞춤 제작</p>
+        </div>
+      </div>
+
+      <div class="story-box">
+        <div class="section-head" style="margin-bottom: 8px;">
+          <h3 class="section-title" style="font-size: 20px; margin-bottom: 6px;">정성 가득 수제 도시락, 구성부터 다릅니다</h3>
+          <p class="section-desc" style="font-size: 14px;">잡곡밥과 계란후라이, 따뜻한 국, 든든한 메인 2~3종에 수제 반찬 6종까지 알차게 채웠습니다.</p>
+        </div>
+
+        <div class="photo-grid-2">
+          <div class="photo-card">
+            <img src="photo1.jpg" alt="잡곡밥, 계란후라이, 국과 함께 즐기는 도시락담다 상차림" />
+            <div class="photo-caption">잡곡밥 + 계란후라이 + 국 + 메인 구성</div>
+          </div>
+          <div class="photo-card">
+            <img src="photo3.jpg" alt="다양한 메인 메뉴와 수제 반찬이 담긴 도시락담다 도시락" />
+            <div class="photo-caption">예산별 맞춤 콤보 &amp; 프리미엄 한정식</div>
+          </div>
+        </div>
+
+        <div class="check-grid">
+          <div class="check-item">
+            <div class="check-badge">✓</div>
+            <div>
+              <strong>메뉴 구성</strong>
+              <span>잡곡밥 + 계란후라이 + 국 + 메인 2~3종(소불고기/제육/떡갈비/돈까스/왕새우튀김 등) + 수제 반찬 6종</span>
+            </div>
+          </div>
+          <div class="check-item">
+            <div class="check-badge">✓</div>
+            <div>
+              <strong>맞춤 서비스</strong>
+              <span>예산별·인원별 1:1 식단 구성 (소량 10개부터 500개 대량 단체 주문까지 가능)</span>
+            </div>
+          </div>
+          <div class="check-item">
+            <div class="check-badge">✓</div>
+            <div>
+              <strong>행정 완벽 지원</strong>
+              <span>세금계산서, 현금영수증, 카드결제, 견적서 즉시 발급</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cta-strip">
+          <p>지금 아래 버튼을 눌러 예산과 수량만 남겨주시면 10분 내로 맞춤 견적 보내드립니다! 👇</p>
+          <div class="cta-strip-btns">
+            <a href="#inquiry" class="btn btn-primary" style="padding: 12px 20px; font-size: 14px;">견적 문의하기</a>
+            <a href="#menu" class="btn btn-sm-white">자세히 보기</a>
+            <a href="https://pf.kakao.com/_zcfexj" target="_blank" rel="noopener noreferrer" class="btn btn-kakao" style="padding: 12px 18px; font-size: 14px;">카카오톡 상담</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 메뉴 라인업 섹션 -->
+  <section id="menu" class="section section-card-bg">
+    <div class="wrap">
+      <div class="quality-banner">
+        <h3>뚜껑 열자마자 박수 나오는 '도시락담다' 수제 도시락 ✨</h3>
+        <p>공장에서 찍어내는 냉동 도시락이 아닙니다. 당일 신선한 재료로 조리해 따뜻하고 정갈하게 담아드립니다.</p>
+      </div>
+
+      <div class="section-head" style="text-align: left; margin-bottom: 18px;">
+        <span class="section-eyebrow">MENU LINEUP</span>
+        <h2 class="section-title" style="margin-bottom: 6px;">대표 메뉴 라인업 (높은 가격순)</h2>
+        <p class="section-desc" style="margin: 0; font-size: 13.5px;">원하는 메뉴의 <strong>[+ 견적 담기]</strong>를 누르면 아래 견적 신청서에 자동 입력됩니다.</p>
+      </div>
+
+      <!-- 카테고리 필터 탭 -->
+      <div class="menu-tabs" role="tablist">
+        <button type="button" class="menu-tab active" data-filter="all">전체 메뉴 (20)</button>
+        <button type="button" class="menu-tab" data-filter="premium">💎 프리미엄 한정식</button>
+        <button type="button" class="menu-tab" data-filter="combo">⭐ 인기 콤보·정식</button>
+        <button type="button" class="menu-tab" data-filter="value">🥗 실속 단품</button>
+      </div>
+
+      <!-- 메뉴 카드 그리드 -->
+      <div class="menu-grid" id="menuGrid">
+        <!-- 프리미엄 -->
+        <div class="menu-card" data-category="premium">
+          <div class="menu-info">
+            <div>
+              <div class="menu-cat-label">프리미엄 한정식</div>
+              <div class="menu-name">품격 한정식 도시락 <span class="tag">대표</span></div>
+              <div class="menu-desc">불고기 + 제육 + 새우튀김 2개 + 생선가스(반) + 잡채 + 삼색전 등</div>
+            </div>
+            <div class="menu-bottom">
+              <span class="menu-price">15,900원</span>
+              <button type="button" class="btn-pick" onclick="pickMenu(this, '품격 한정식 도시락 (15,900원)')">+ 견적 담기</button>
+            </div>
+          </div>
+          <img class="menu-thumb" src="이미지2.jpg" alt="품격 한정식 도시락" />
+        </div>
+
+        <div class="menu-card" data-category="premium">
+          <div class="menu-info">
+            <div>
+              <div class="menu-cat-label">프리미엄 한정식</div>
+              <div class="menu-name">품격 한가득 도시락</div>
+              <div class="menu-desc">전통방식 숙성 소불고기 + 매콤 오징어볶음 + 명인 떡갈비 + 군만두 등</div>
+            </div>
+            <div class="menu-bottom">
+              <span class="menu-price">15,900원</span>
+              <button type="button" class="btn-pick" onclick="pickMenu(this, '품격 한가득 도시락 (15,900원)')">+ 견적 담기</button>
+            </div>
+          </div>
+          <img class="menu-thumb" src="이미지3.jpg" alt="품격 한가득 도시락" />
+        </div>
+
+        <div class="menu-card" data-category="premium">
+          <div class="menu-info">
+            <div>
+              <div class="menu-cat-label">프리미엄 한정식</div>
+              <div class="menu-name">명인(떡갈비+오징어)도시락</div>
+              <div class="menu-desc">명인 떡갈비 + 매콤한 오징어볶음 + 삼색전 + 계란말이 + 샐러드 + 잡채 + 반찬</div>
+            </div>
+            <div class="menu-bottom">
+              <span class="menu-price">14,900원</span>
+              <button type="button" class="btn-pick" onclick="pickMenu(this, '명인(떡갈비+오징어)도시락 (14,900원)')">+ 견적 담기</button>
+            </div>
+          </div>
+          <img class="menu-thumb" src="이미지1.jpg" alt="명인(떡갈비+오징어)도시락" />
+        </div>
+
+        <!-- 인기 콤보 & 정식 -->
+        <div class="menu-card" data-category="combo">
+          <div class="menu-info">
+            <div>
+              <div class="menu-cat-label">인기 콤보 &amp; 정식</div>
+              <div class="menu-name">오돈콤보(오징어볶음+돈가스) <span class="tag">인기</span></div>
+              <div class="menu-desc">오징어볶음 + 돈가스 + 잡채 + 전 + 반찬 4종 + 샐러드 + 국 + 흑미밥</div>
+            </div>
+            <div class="menu-bottom">
+              <span class="menu-price">14,300원</span>
+              <button type="button" class="btn-pick" onclick="pickMenu(this, '오돈콤보 (14,300원)')">+ 견적 담기</button>
+            </div>
+          </div>
+          <img class="menu-thumb" src="이미지2.jpg" alt="오돈콤보" />
+        </div>
+
+        <div class="menu-card" data-category="combo">
+          <div class="menu-info">
+            <div>
+              <div class="menu-cat-label">인기 콤보 &amp; 정식</div>
+              <div class="menu-name">한정식 소불고기도시락</div>
+              <div class="menu-desc">불고기 + 새우튀김 2개 + 잡채 + 삼색전 + 계란말이 + 샐러드 + 4찬 반찬 + 국 + 흑미밥</div>
+            </div>
+            <div class="menu-bottom">
+              <span class="menu-price">14,300원</span>
+              <button type="button" class="btn-pick" onclick="pickMenu(this, '한정식 소불고기도시락 (14,300원)')">+ 견적 담기</button>
+            </div>
+          </div>
+          <img class="menu-thumb" src="이미지1.jpg" alt="한정식 소불고기도시락" />
+        </div>
+
+        <div class="menu-card" data-category="combo">
+          <div class="menu-info">
+            <div>
+              <div class="menu-cat-label">인기 콤보 &amp; 정식</div>
+              <div class="menu-name">명인(떡갈비+소불고기)도시락</div>
+              <div class="menu-desc">명인 떡갈비 + 소불고기 + 오색전 + 전통 잡채 + 계란말이 + 샐러드 + 반찬 4가지</div>
+            </div>
+            <div class="menu-bottom">
+              <span class="menu-price">14,300원</span>
+              <button type="button" class="btn-pick" onclick="pickMenu(this, '명인(떡갈비+소불고기)도시락 (14,300원)')">+ 견적 담기</button>
+            </div>
+          </div>
+          <img class="menu-thumb" src="이미지4.jpg" alt="명인(떡갈비+소불고기)도시락" />
+        </div>
+
+        <div class="menu-card" data-category="combo">
+          <div class="menu-info">
+            <div>
+              <div class="menu-cat-label">인기 콤보 &amp; 정식</div>
+              <div class="menu-name">명인(떡갈비+제육) 도시락 <span class="tag">인기</span></div>
+              <div class="menu-desc">명인 떡갈비 + 제육볶음 + 오색전 + 전통 잡채 + 계란말이 + 샐러드 + 반찬 4가지</div>
+            </div>
+            <div class="menu-bottom">
+              <span class="menu-price">13,900원</span>
+              <button type="button" class="btn-pick" onclick="pickMenu(this, '명인(떡갈비+제육) 도시락 (13,900원)')">+ 견적 담기</button>
+            </div>
+          </div>
+          <img class="menu-thumb" src="이미지3.jpg" alt="명인(떡갈비+제육) 도시락" />
+        </div>
+
+        <div class="menu-card" data-category="combo">
+          <div class="menu-info">
+            <div>
+              <div class="menu-cat-label">인기 콤보 &amp; 정식</div>
+              <div class="menu-name">불돈콤보(소불고기+돈가스)</div>
+              <div class="menu-desc">소불고기 + 돈가스 + 잡채 + 전 + 반찬 4종 + 샐러드 + 국 + 흑미밥</div>
+            </div>
+            <div class="menu-bottom">
+              <span class="menu-price">13,900원</span>
+              <button type="button" class="btn-pick" onclick="pickMenu(this, '불돈콤보 (13,900원)')">+ 견적 담기</button>
+            </div>
+          </div>
+          <img class="menu-thumb" src="이미지7.jpg" alt="불돈콤보" />
+        </div>
+
+        <div class="menu-card" data-category="combo">
+          <div class="menu-info">
+            <div>
+              <div class="menu-cat-label">인기 콤보 &amp; 정식</div>
+              <div class="menu-name">콤보C (오징어+불고기)도시락</div>
+              <div class="menu-desc">오징어볶음 + 불고기 + 잡채 + 전 + 반찬 4종 + 샐러드 + 국 + 흑미밥</div>
+            </div>
+            <div class="menu-bottom">
+              <span class="menu-price">13,900원</span>
+              <button type="button" class="btn-pick" onclick="pickMenu(this, '콤보C (13,900원)')">+ 견적 담기</button>
+            </div>
+          </div>
+          <img class="menu-thumb" src="이미지5.jpg" alt="콤보C 도시락" />
+        </div>
+
+        <div class="menu-card" data-category="combo">
+          <div class="menu-info">
+            <div>
+              <div class="menu-cat-label">인기 콤보 &amp; 정식</div>
+              <div class="menu-name">제돈콤보(제육볶음+돈가스)</div>
+              <div class="menu-desc">제육볶음 + 돈가스 + 잡채 + 전 + 반찬 4종 + 샐러드 + 국 + 흑미밥</div>
+            </div>
+            <div class="menu-bottom">
+              <span class="menu-price">13,400원</span>
+              <button type="button" class="btn-pick" onclick="pickMenu(this, '제돈콤보 (13,400원)')">+ 견적 담기</button>
+            </div>
+          </div>
+          <img class="menu-thumb" src="이미지8.jpg" alt="제돈콤보" />
+        </div>
+
+        <div class="menu-card" data-category="combo">
+          <div class="menu-info">
+            <div>
+              <div class="menu-cat-label">인기 콤보 &amp; 정식</div>
+              <div class="menu-name">콤보A (불고기+제육볶음) 도시락</div>
+              <div class="menu-desc">불고기 + 제육볶음 + 잡채 + 계란말이 + 샐러드 + 4찬 반찬 + 국 + 흑미밥</div>
+            </div>
+            <div class="menu-bottom">
+              <span class="menu-price">13,400원</span>
+              <button type="button" class="btn-pick" onclick="pickMenu(this, '콤보A (13,400원)')">+ 견적 담기</button>
+            </div>
+          </div>
+          <img class="menu-thumb" src="이미지2.jpg" alt="콤보A 도시락" />
+        </div>
+
+        <div class="menu-card" data-category="combo">
+          <div class="menu-info">
+            <div>
+              <div class="menu-cat-label">인기 콤보 &amp; 정식</div>
+              <div class="menu-name">콤보B (제육볶음+불고기) 도시락</div>
+              <div class="menu-desc">불고기 + 제육볶음 + 잡채 + 계란말이 + 샐러드 + 4찬 반찬 + 국 + 흑미밥</div>
+            </div>
+            <div class="menu-bottom">
+              <span class="menu-price">12,900원</span>
+              <button type="button" class="btn-pick" onclick="pickMenu(this, '콤보B (12,900원)')">+ 견적 담기</button>
+            </div>
+          </div>
+          <img class="menu-thumb" src="이미지6.jpg" alt="콤보B 도시락" />
+        </div>
+
+        <!-- 실속 단품 -->
+        <div class="menu-card" data-category="value">
+          <div class="menu-info">
+            <div>
+              <div class="menu-cat-label">실속 단품</div>
+              <div class="menu-name">등심돈까스도시락</div>
+              <div class="menu-desc">바삭한 등심돈까스와 흑미밥, 정갈한 반찬 조합의 실속 메뉴</div>
+            </div>
+            <div class="menu-bottom">
+              <span class="menu-price">10,500원</span>
+              <button type="button" class="btn-pick" onclick="pickMenu(this, '등심돈까스도시락 (10,500원)')">+ 견적 담기</button>
+            </div>
+          </div>
+          <img class="menu-thumb" src="이미지7.jpg" alt="등심돈까스도시락" />
+        </div>
+
+        <div class="menu-card" data-category="value">
+          <div class="menu-info">
+            <div>
+              <div class="menu-cat-label">실속 단품</div>
+              <div class="menu-name">매콤오징어볶음도시락</div>
+              <div class="menu-desc">매콤달콤한 오징어볶음을 메인으로 한 든든한 한 끼</div>
+            </div>
+            <div class="menu-bottom">
+              <span class="menu-price">10,500원</span>
+              <button type="button" class="btn-pick" onclick="pickMenu(this, '매콤오징어볶음도시락 (10,500원)')">+ 견적 담기</button>
+            </div>
+          </div>
+          <img class="menu-thumb" src="이미지5.jpg" alt="매콤오징어볶음도시락" />
+        </div>
+
+        <div class="menu-card" data-category="value">
+          <div class="menu-info">
+            <div>
+              <div class="menu-cat-label">실속 단품</div>
+              <div class="menu-name">경양식돈까스도시락</div>
+              <div class="menu-desc">소스가 어우러진 돈까스로 남녀노소 부담 없이 즐기기 좋은 메뉴</div>
+            </div>
+            <div class="menu-bottom">
+              <span class="menu-price">10,000원</span>
+              <button type="button" class="btn-pick" onclick="pickMenu(this, '경양식돈까스도시락 (10,000원)')">+ 견적 담기</button>
+            </div>
+          </div>
+          <img class="menu-thumb" src="이미지8.jpg" alt="경양식돈까스도시락" />
+        </div>
+
+        <div class="menu-card" data-category="value">
+          <div class="menu-info">
+            <div>
+              <div class="menu-cat-label">실속 단품</div>
+              <div class="menu-name">생선가스&amp;새우튀김도시락</div>
+              <div class="menu-desc">튀김류를 선호하는 행사·모임용 가성비 구성</div>
+            </div>
+            <div class="menu-bottom">
+              <span class="menu-price">10,000원</span>
+              <button type="button" class="btn-pick" onclick="pickMenu(this, '생선가스&새우튀김도시락 (10,000원)')">+ 견적 담기</button>
+            </div>
+          </div>
+          <img class="menu-thumb" src="이미지1.jpg" alt="생선가스&새우튀김도시락" />
+        </div>
+
+        <div class="menu-card" data-category="value">
+          <div class="menu-info">
+            <div>
+              <div class="menu-cat-label">실속 단품</div>
+              <div class="menu-name">실속파불고기도시락</div>
+              <div class="menu-desc">달큰하고 감칠맛 나는 불고기 중심의 실속 도시락</div>
+            </div>
+            <div class="menu-bottom">
+              <span class="menu-price">10,000원</span>
+              <button type="button" class="btn-pick" onclick="pickMenu(this, '실속파불고기도시락 (10,000원)')">+ 견적 담기</button>
+            </div>
+          </div>
+          <img class="menu-thumb" src="이미지10.jpg" alt="실속파불고기도시락" />
+        </div>
+
+        <div class="menu-card" data-category="value">
+          <div class="menu-info">
+            <div>
+              <div class="menu-cat-label">실속 단품</div>
+              <div class="menu-name">모듬돈까스</div>
+              <div class="menu-desc">생선가스 + 새우튀김 + 돈가스 + 흑미밥 + 반찬 및 샐러드</div>
+            </div>
+            <div class="menu-bottom">
+              <span class="menu-price">10,000원</span>
+              <button type="button" class="btn-pick" onclick="pickMenu(this, '모듬돈까스 (10,000원)')">+ 견적 담기</button>
+            </div>
+          </div>
+          <img class="menu-thumb" src="이미지7.jpg" alt="모듬돈까스" />
+        </div>
+
+        <div class="menu-card" data-category="value">
+          <div class="menu-info">
+            <div>
+              <div class="menu-cat-label">실속 단품</div>
+              <div class="menu-name">떡갈비 도시락</div>
+              <div class="menu-desc">담백한 떡갈비와 기본 반찬으로 구성된 합리적 선택</div>
+            </div>
+            <div class="menu-bottom">
+              <span class="menu-price">10,000원</span>
+              <button type="button" class="btn-pick" onclick="pickMenu(this, '떡갈비 도시락 (10,000원)')">+ 견적 담기</button>
+            </div>
+          </div>
+          <img class="menu-thumb" src="이미지4.jpg" alt="떡갈비 도시락" />
+        </div>
+
+        <div class="menu-card" data-category="value">
+          <div class="menu-info">
+            <div>
+              <div class="menu-cat-label">실속 단품</div>
+              <div class="menu-name">엄마손제육볶음도시락</div>
+              <div class="menu-desc">예산 부담을 낮춘 단체·학원·현장 식사용 베스트 가성비 메뉴</div>
+            </div>
+            <div class="menu-bottom">
+              <span class="menu-price">9,500원</span>
+              <button type="button" class="btn-pick" onclick="pickMenu(this, '엄마손제육볶음도시락 (9,500원)')">+ 견적 담기</button>
+            </div>
+          </div>
+          <img class="menu-thumb" src="이미지9.jpg" alt="엄마손제육볶음도시락" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 제작 및 배송 과정 -->
+  <section id="process" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="section-eyebrow">HYGIENE &amp; DELIVERY</span>
+        <h2 class="section-title">체계적인 당일 조리 · 위생 포장 · 직배송</h2>
+        <p class="section-desc">수백 개의 단체 주문도 누락 없이, 가장 맛있는 온도를 유지해 약속된 시간에 도착합니다.</p>
+      </div>
+
+      <div class="process-grid">
+        <img class="process-img" src="photo2.jpg" alt="위생 복장을 갖춘 인력이 단체 도시락을 포장·검수·적재하는 현장" />
+        <div class="process-steps">
+          <div class="step-card">
+            <span class="step-num">STEP 01</span>
+            <div>
+              <h4>당일 신선 조리 및 9첩 검수</h4>
+              <p>당일 신선한 재료로 조리한 뒤, 주문하신 메뉴 구성과 수량을 체크리스트로 꼼꼼히 확인합니다.</p>
+            </div>
+          </div>
+          <div class="step-card">
+            <span class="step-num">STEP 02</span>
+            <div>
+              <h4>위생 포장 및 보온백 적재</h4>
+              <p>위생모·마스크·장갑을 착용한 전문 인력이 깔끔하게 밀봉 포장한 뒤 보온백과 전용 박스에 적재합니다.</p>
+            </div>
+          </div>
+          <div class="step-card">
+            <span class="step-num">STEP 03</span>
+            <div>
+              <h4>원하는 시간·장소 정확 배송</h4>
+              <p>회의실·강당·병원·학원 등 요청하신 동선과 시간에 맞춰 차질 없이 안전하게 전달해 드립니다.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 단체주문 무료 견적 신청 -->
+  <section id="inquiry" class="section section-card-bg">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="section-eyebrow">FAST QUOTE</span>
+        <h2 class="section-title">단체주문 간편 견적 문의</h2>
+        <p class="section-desc">예산과 수량만 남겨주시면 확인 후 <strong>10분 내로 맞춤 견적</strong>을 보내드립니다.</p>
+      </div>
+
+      <div class="inquiry-box">
+        <div class="quick-contact-bar">
+          <div class="quick-contact-text">
+            <strong>급한 일정이나 바로 상담이 필요하신가요?</strong>
+            <span>전화(010-2267-3330) 또는 카카오톡 채널로 즉시 안내해 드립니다.</span>
+          </div>
+          <div class="quick-contact-btns">
+            <a href="https://pf.kakao.com/_zcfexj" target="_blank" rel="noopener noreferrer" class="btn btn-kakao">💬 카카오톡 상담</a>
+            <a href="tel:01022673330" class="btn btn-primary" style="padding: 11px 12px; font-size: 13.5px;">📞 전화 걸기</a>
+          </div>
+        </div>
+
+        <form id="quoteForm" onsubmit="submitQuote(event)">
+          <div class="form-grid">
+            <div class="form-group">
+              <label>성함 / 단체(회사)명 <span class="req">*</span></label>
+              <input type="text" placeholder="예: 홍길동 / OO기업" required />
+            </div>
+
+            <div class="form-group">
+              <label>연락처 <span class="req">*</span></label>
+              <input type="tel" placeholder="예: 010-0000-0000" required />
+            </div>
+
+            <div class="form-group">
+              <label>행사 유형 <span class="req">*</span></label>
+              <select required>
+                <option value="">행사 유형을 선택하세요</option>
+                <option>회의 / 세미나</option>
+                <option>병원 / 학회 행사</option>
+                <option>학원 / 학교 / 시험</option>
+                <option>워크샵 / 체육대회 / 각종 행사</option>
+                <option>회사 야근 / 정기 식사</option>
+                <option>기타 모임·단체</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>배송 희망 날짜 및 시간 <span class="req">*</span></label>
+              <input type="text" placeholder="예: 12월 3일 오전 11시 30분" required />
+            </div>
+
+            <div class="form-group">
+              <label>예상 수량 (10~500개) <span class="req">*</span></label>
+              <input type="text" placeholder="예: 50개" required />
+            </div>
+
+            <div class="form-group">
+              <label>1인 희망 예산대</label>
+              <select>
+                <option value="">예산대를 선택하세요 (선택)</option>
+                <option>9,000원 ~ 10,500원 (실속 라인)</option>
+                <option>12,000원 ~ 14,300원 (인기 콤보·정식)</option>
+                <option>14,900원 ~ 15,900원 (프리미엄 한정식)</option>
+                <option>예산 맞춤 추천 희망</option>
+              </select>
+            </div>
+
+            <div class="form-group full">
+              <label>희망 메뉴 (메뉴판에서 [+ 견적 담기] 시 자동 입력)</label>
+              <input type="text" id="selectedMenuInput" placeholder="예: 명인(떡갈비+제육) 도시락, 오돈콤보 등 또는 '추천 희망'" />
+            </div>
+
+            <div class="form-group full">
+              <label>배송 지역 (동 / 건물명) <span class="req">*</span></label>
+              <input type="text" placeholder="예: OO구 OO동 OO타워 3층" required />
+            </div>
+
+            <div class="form-group full">
+              <label>필요한 증빙·결제 방식 (복수 선택 가능)</label>
+              <div class="doc-checks">
+                <label class="doc-check-label"><input type="checkbox" value="견적서" /> 견적서 발급</label>
+                <label class="doc-check-label"><input type="checkbox" value="세금계산서" /> 세금계산서</label>
+                <label class="doc-check-label"><input type="checkbox" value="현금영수증" /> 현금영수증</label>
+                <label class="doc-check-label"><input type="checkbox" value="카드결제" /> 카드결제</label>
+              </div>
+            </div>
+
+            <div class="form-group full">
+              <label>기타 요청사항</label>
+              <textarea rows="3" placeholder="알레르기, 수저/물티슈 추가, 배송 출입 안내 등 요청사항을 적어주세요."></textarea>
+            </div>
+          </div>
+
+          <label class="privacy-row">
+            <input type="checkbox" required />
+            <span>[필수] 단체도시락 견적 상담을 위한 개인정보 수집 및 이용에 동의합니다.</span>
+          </label>
+
+          <button type="submit" class="submit-btn">10분 내 무료 맞춤 견적 받기</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 푸터 -->
+  <footer class="footer">
+    <strong>도시락담다</strong> · 우리 동네 단체도시락 1등<br />
+    단체 주문 및 제휴 문의: 010-2267-3330 · 카카오톡 채널: @도시락담다<br />
+    회의·행사·학원·세미나 맞춤 제작 (10개~500개 OK) · 세금계산서 및 견적서 즉시 발급
+  </footer>
+
+  <!-- 모바일 하단 고정 플로팅 바 -->
+  <div class="sticky-bar">
+    <div class="sticky-inner">
+      <a href="tel:01022673330" class="btn sticky-call">📞 전화 문의</a>
+      <a href="https://pf.kakao.com/_zcfexj" target="_blank" rel="noopener noreferrer" class="btn sticky-kakao">💬 카톡 상담</a>
+      <a href="#inquiry" class="btn sticky-quote">견적 문의하기</a>
+    </div>
+  </div>
+
+  <!-- 알림 토스트 -->
+  <div id="toast" class="toast">견적서에 메뉴가 담겼습니다.</div>
+
+  <script>
+    // 메뉴 카테고리 탭 필터
+    const tabs = document.querySelectorAll('.menu-tab');
+    const cards = document.querySelectorAll('.menu-card');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const filter = tab.dataset.filter;
+
+        cards.forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    // 메뉴 견적 담기 기능
+    const pickedMenus = [];
+    const menuInput = document.getElementById('selectedMenuInput');
+    const toast = document.getElementById('toast');
+    let toastTimer;
+
+    function showToast(msg) {
+      toast.textContent = msg;
+      toast.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.classList.remove('show'), 2000);
+    }
+
+    function pickMenu(btn, menuTitle) {
+      const idx = pickedMenus.indexOf(menuTitle);
+      if (idx === -1) {
+        pickedMenus.push(menuTitle);
+        btn.classList.add('picked');
+        btn.textContent = '✓ 담김';
+        showToast('견적 신청서에 담겼습니다.');
+      } else {
+        pickedMenus.splice(idx, 1);
+        btn.classList.remove('picked');
+        btn.textContent = '+ 견적 담기';
+        showToast('선택이 해제되었습니다.');
+      }
+      menuInput.value = pickedMenus.join(', ');
+    }
+
+    // 폼 접수 알림 (실제 전송 연동 전 안내)
+    function submitQuote(e) {
+      e.preventDefault();
+      alert('견적 문의가 접수되었습니다! 확인 후 10분 내로 빠르게 연락드리겠습니다.');
+    }
+  </script>
+</body>
+</html>
