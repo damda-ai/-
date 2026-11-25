@@ -17,19 +17,22 @@ export function Hero({ onOpenKakao }: HeroProps) {
   return (
     <section className="bg-[#161f1d] text-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-12 pb-14 md:pt-16 md:pb-20">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-stretch">
           {/* Left Copy Column */}
           <div className="lg:col-span-7 flex flex-col justify-center">
-            <div className="flex items-start justify-between gap-4 sm:gap-6 mb-8">
+            <div className="flex items-start justify-between gap-3 sm:gap-5 mb-8">
               <div className="flex-1 min-w-0">
-                <p className="text-xs sm:text-sm font-semibold tracking-wide text-[#ff9c6b] mb-3.5">
+                <p className="text-[11px] sm:text-sm font-semibold tracking-wide text-[#ff9c6b] mb-3.5">
                   단체주문 전문 · 회의 · 행사 · 학원 · 세미나 맞춤 제작 (10개~500개 OK)
                 </p>
 
-                <h1 className="text-[1.7rem] sm:text-[2.35rem] lg:text-[2.85rem] font-extrabold leading-[1.22] tracking-tight text-balance text-white mb-4">
-                  우리 동네 단체도시락 1등,
-                  <br />
-                  <span className="text-[#ff9c6b]">도시락담다</span>
+                <h1 className="font-extrabold leading-[1.2] tracking-tight text-white mb-4">
+                  <span className="block whitespace-nowrap text-[1.15rem] sm:text-[1.8rem] lg:text-[1.75rem] xl:text-[2.1rem]">
+                    우리 동네 단체도시락 1등,
+                  </span>
+                  <span className="block mt-1 text-[#ff9c6b] text-[1.85rem] sm:text-[2.45rem] lg:text-[2.5rem] xl:text-[2.85rem]">
+                    도시락담다
+                  </span>
                 </h1>
 
                 <p className="text-sm sm:text-[16.5px] text-[#d5dedb] leading-relaxed max-w-xl">
@@ -38,7 +41,7 @@ export function Hero({ onOpenKakao }: HeroProps) {
                 </p>
               </div>
 
-              <div className="shrink-0 w-24 h-24 sm:w-36 sm:h-36 lg:w-44 lg:h-44 rounded-2xl overflow-hidden border border-white/15 bg-[#5a141d] shadow-lg">
+              <div className="shrink-0 w-16 h-16 sm:w-28 sm:h-28 lg:w-36 lg:h-36 xl:w-40 xl:h-40 rounded-2xl overflow-hidden border border-white/15 bg-[#5a141d] shadow-lg">
                 <ResilientImage
                   src={BRAND_IMAGES.brandMark}
                   alt="도시락담다 브랜드 마크"
